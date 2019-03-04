@@ -59,7 +59,7 @@ def input_to_index(number)
    number.to_i - 1
 end
 
-def move(board, idx)
+def move(board, idx, player)
   board[idx] = player
   return board
 end 
