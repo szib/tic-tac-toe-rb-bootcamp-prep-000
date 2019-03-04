@@ -44,3 +44,7 @@ def winner(board)
   return nil unless winning_combination
   board[winning_combination[0]]
 end
+
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
