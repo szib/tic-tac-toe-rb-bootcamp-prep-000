@@ -1,13 +1,3 @@
-def turn_count(board)
-  turn = 0
-  board.each {|t| turn += 1 if t != " "}
-  turn
-end
-
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
-end
-
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -18,6 +8,16 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6]
 ]
+
+def turn_count(board)
+  turn = 0
+  board.each {|t| turn += 1 if t != " "}
+  turn
+end
+
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
