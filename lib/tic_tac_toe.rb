@@ -84,3 +84,14 @@ def turn(board)
     turn(board)
   end
 end
+
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "Congratulation #{winner(board)}."
+  elseif draw?(board)
+    puts "It's a draw."
+  end
+end
